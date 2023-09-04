@@ -1,0 +1,258 @@
+/* styles.css */
+
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-link {
+    display: block;
+    padding: 10px 20px;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilos para la galería de plantas */
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto; /* Centra la galería verticalmente */
+    max-width: 1200px; /* Establece un ancho máximo para la galería */
+}
+.planta {
+    text-align: center;
+    background-color: #f9f9f9; /* Cambia el color de fondo */
+    padding: 20px; /* Aumenta el relleno */
+    border: 2px solid #007bff; /* Cambia el color del borde a azul */
+    border-radius: 10px; /* Bordes más redondeados */
+    width: calc(33.33% - 20px); /* Calcula el ancho para 3 columnas en pantallas grandes */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave */
+}
+
+.planta img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilos adicionales para el contenido de la planta */
+.planta h3 {
+    margin-top: 0;
+    font-size: 1.5em; /* Aumenta el tamaño del título */
+}
+
+.planta p {
+    margin-bottom: 15px; /* Aumenta el espacio inferior */
+    font-size: 1.1em; /* Aumenta el tamaño del texto */
+}
+
+/* Estilos para los enlaces de descarga */
+.planta a {
+    display: inline-block; /* Cambia a enlaces en línea */
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px; /* Aumenta el relleno */
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.planta a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .planta {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin: 0 0 20px; /* Agrega espacio entre plantas */
+    }
+}
+
+/* Estilos para pantallas con altura reducida */
+@media (max-height: 600px) {
+    header {
+        padding: 5px 0; /* Reduce el espacio vertical en la cabecera */
+    }
+
+    h1 {
+        margin: 10px 0;
+    }
+
+    .galeria {
+        margin: 10px auto; /* Centra la galería verticalmente con menos espacio */
+    }
+
+    .planta {
+        padding: 15px; /* Reduce el espacio en cada planta */
+    }
+}
+/* Estilos para el filtro de plantas */
+
+.filtro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filtro label {
+    margin: 0 10px;
+}
+
+/* Estilos para el formulario */
+
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.formulario h2 {
+    margin-bottom: 10px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.formulario button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Regla para mostrar u ocultar plantas según la selección en la lista desplegable */
+#categoriaPlanta {
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+/* Regla para mostrar solo las plantas de exterior por defecto */
+#categoriaPlanta option[value="exterior"] ~ .galeria .planta.interior {
+    display: none;
+    visibility: hidden;
+}
+
+.planta.planta.planta.interior {
+    display: none;
+}
+
+/* Regla para mostrar todas las plantas de exterior por defecto */
+#categoriaPlanta option[value="exterior"] ~ .galeria .planta.exterior {
+    display: block;
+}
+
+/* Estilos para la sección "Actividad 1" */
+section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #333;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #666;
+}

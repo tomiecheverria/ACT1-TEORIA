@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Plantsadasfasfas</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Menú</a>
+                    <div class="dropdown-content">
+                        <div class="dueno-jardin">
+                            <h2>Información del Dueño del Jardín</h2>
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Email:</strong> juan@example.com</p>
+                            <p><strong>Teléfono:</strong> +123456789</p>
+                        </div>
+                        <a href="plantas_interior.html" class="menu-link">Plantas de Interior</a>
+                        <a href="plantas_exterior.html" class="menu-link">Plantas de Exterior</a>
+                        <div class="formulario">
+                            <h2>Contacto</h2>
+                            <p>Razón: Necesito personal para cuidar el jardín</p>
+                            <form action="procesar_formulario.php" method="POST">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+        
+                                <label for="apellido">Apellido:</label>
+                                <input type="text" id="apellido" name="apellido" required>
+        
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+        
+                                <label for="disponibilidad">Disponibilidad:</label>
+                                <input type="text" id="disponibilidad" name="disponibilidad" required>
+        
+                                <button type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Galería de Plantas</h1>
+    <div class="filtro">
+        <label for="categoriaPlanta">Selecciona una categoría:</label>
+        <select id="categoriaPlanta">
+           
+            <option value="interior" selected>Plantas de Interior</option>
+            <option value="exterior">Plantas de Exterior</option>
+        </select>
+    </div>
+    
+    <div class="galeria">
+        <div class="planta interior">
+            <img src="imagenes/planta_interior_1.jpg" alt="Planta de Interior 1">
+            <h3>Planta de Interior : cactus de navidad</h3>
+            <p>Categoría: Interior</p>
+            <a href="info/Cactus de Navidad.pdf" download> +info: Descargar como pdf</a>
+        </div>
+        <div class="planta interior">
+            <img src="imagenes/planta_interior_2.jpg" alt="Planta de Interior 2">
+            <h3>Planta de Interior: Geranio </h3>
+            <p>Categoría: Interior</p>
+            <a href="info/Geranio.pdf" download> +info: Descargar como pdf</a>
+        </div>
+        <div class="planta interior">
+            <img src="imagenes/planta_interior_3.jpg" alt="Planta de Interior 3">
+            <h3>Planta de Interior Helecho de boston</h3>
+            <p>Categoría: Interior</p>
+            <a href="info/Helecho Boston.pdf" download> +info: Descargar como pdf</a>
+        </div>
+        <div class="planta exterior">
+            <img src="imagenes/planta_exterior_1.jpg" alt="Planta de Exterior 1">
+            <h3>Planta de Exterior Lavanda</h3>
+            <p>Categoría: Exterior</p>
+            <a href="info/Lavanda.pdf" download> +info: Descargar como pdf</a>
+        </div>
+        <div class="planta exterior">
+            <img src="imagenes/planta_exterior_2.jpg" alt="Planta de Exterior 2">
+            <h3>Planta de Exterior Rosa</h3>
+            <p>Categoría: Exterior</p>
+            <a href="info/Rosa.pdf" download> +info: Descargar como pdf</a>
+        </div>
+        <div class="planta exterior">
+            <img src="imagenes/planta_exterior_3.jpg" alt="Planta de Exterior 3">
+            <h3>Planta de Exterior Suculenta Echeveria</h3>
+            <p>Categoría: Exterior</p>
+            <a href="info/Suculenta Echeveria.pdf" download> +info: Descargar como pdf</a>
+        </div>
+    </div>
+    <section>
+        <h2>Actividad 1 - PROYECTO DE SOFTWARE</h2>
+        <p>Links para poder acceder a un documento donde este la consigna junto con los links a los videos</p>
+        <a href=https://drive.google.com/drive/folders/1LJ9Ph188p0y-oSxCN4vd1lgpYzOyR0UO?usp=sharing>Link a la carpeta de Drive</a>
+    </section>
+</body>
+</html>
